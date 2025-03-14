@@ -9,30 +9,26 @@ public class Principal {
         Funcionario func = new Funcionario();
         // INSTANCIANDO ATRIBUTOS DO func
         func.setNomeCompleto("Vitor Santos");
-        func.setSexo(1);
-
+        
         // CRIANDO O 1º DEPENDENTE
         Dependente dep1 = new Dependente();
         // INSTANCIANDO ATRIBUTOS DO dep
         dep1.setNomeCompleto("Hamilton");
-        dep1.setParticiaPlano(true);
-
+        
         // CRIANDO O 2º DEPENDENTE
         Dependente dep2 = new Dependente();
         dep2.setNomeCompleto("Leclerc");
-        dep2.setParticiaPlano(true);
+        
+        // CRIANDO UMA LISTA DE DEPENDENTES
+        ArrayList<Dependente> deps = new ArrayList<>();
+        deps.add(dep1);
+        deps.add(dep2);
 
-        // ASSOCIANDO func À dep1 e dep2
-        func.setDependentes(dep1);
-        func.setDependentes(dep2);
+        // ASSOCIANDO func AOS dep1 E dep2
+        func.setDependentes(deps);
 
-        // CRIANDO LISTA DE DEPENDENTES
-        ArrayList<Dependente> dependentes = new ArrayList<>();
-        dependentes.add(dep1);
-        dependentes.add(dep2);
-
-        for(Dependente dep: dependentes){
-            System.out.println(dep1.getNomeCompleto() + " e " + dep2.getNomeCompleto() + " são dependentes de " + func.getNomeCompleto());
-        }
+        // EXIBIÇÃO DE INFORMAÇÕES
+        System.out.println("O funcionário " + func.getNomeCompleto() + " possui " + dep1.getNomeCompleto() + " e " + dep2.getNomeCompleto() + " como dependentes");
+        System.out.println(func.getNomeCompleto() + " possui " + deps.size() + " dependentes");
     }
 }
