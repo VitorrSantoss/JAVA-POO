@@ -12,12 +12,12 @@ public class Funcionario {
     private Integer sexo;
     private double salario;
     private int telefone;
-    private Dependente dependentes;
+    private ArrayList<Dependente> dependentes;
 
     // CONSTRUTORES
     public Funcionario() { }
 
-    public Funcionario(Integer matricula, String nomeCompleto, Date dataNascimento, Integer sexo, double salario, int telefone, Dependente dependentes) {
+    public Funcionario(Integer matricula, String nomeCompleto, Date dataNascimento, Integer sexo, double salario, int telefone, ArrayList<Dependente> dependentes) {
         this.matricula = matricula;
         this.nomeCompleto = nomeCompleto;
         this.dataNascimento = dataNascimento;
@@ -76,11 +76,11 @@ public class Funcionario {
         this.telefone = telefone;
     }
 
-    public Dependente getDependentes() {
+    public ArrayList<Dependente> getDependentes() {
         return dependentes;
     }
 
-    public void setDependentes(Dependente dependentes) {
+    public void setDependentes(ArrayList<Dependente> dependentes) {
         this.dependentes = dependentes;
     }
 }
