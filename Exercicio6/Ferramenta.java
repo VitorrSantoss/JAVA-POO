@@ -35,11 +35,11 @@ public class Ferramenta extends ItemDeLoja{
     // MÉTODOS ESPECIAS
     @Override
     public int getIndentificador(){
-        return serial;
+        System.out.println("Serial: " + serial);
     }
 
     public void separar(){
-        if (categoria.equals(" ")){
+        if (categoria.equals(null)){
             System.out.println("Outros");
         }
         else{
