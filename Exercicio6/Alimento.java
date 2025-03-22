@@ -24,7 +24,7 @@ public class Alimento extends ItemDeLoja{
 
     @Override
     public int getIndentificador(){
-        return selo;
+        System.out.println("Selo: " + selo);
     }
 }
 
