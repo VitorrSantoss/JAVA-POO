@@ -9,6 +9,8 @@ public class Principal {
 
         Ferramenta ferramenta = new Ferramenta();
 
+        System.out.println("---Objeto Ferramenta---");
+
         System.out.print("Código do Item: ");
         ferramenta.setCodigoDoItem(sc.nextInt());
 
@@ -31,15 +33,19 @@ public class Principal {
         System.out.print("Categoria: ");
         ferramenta.setCategoria(sc.nextLine());
 
-
-        // Deve retornar CATEGORIA
+        // Deve retornar CATEGORIA -> Funcionando
         ferramenta.separar();
 
-        // Deve retornar SERIAL
+        System.out.println();
+
+        // Deve retornar SERIAL -> Funcionando
         ferramenta.getIndentificador();
 
+        System.out.println("\n-=-=-=-=--=-=-=-=-=-=-=-");
 
         Alimento comida = new Alimento();
+
+        System.out.println("---Objeto Comida---");
 
         System.out.print("Código do Item: ");
         comida.setCodigoDoItem(sc.nextInt());
@@ -58,7 +64,7 @@ public class Principal {
         System.out.print("Selo: ");
         comida.setSelo(sc.nextInt());
 
-        // Deve retornar SELO
+        // Deve retornar SELO -> Funcionando
         comida.getIndentificador();
 
 
